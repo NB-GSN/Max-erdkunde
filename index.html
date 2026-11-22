@@ -218,6 +218,66 @@ th,td{padding:7px 9px;border-bottom:1px solid #efe2c4;text-align:left;vertical-a
 th{background:#f3e5c5}
 .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 
+/* ---------- shop ---------- */
+.shophead{display:flex;gap:10px;align-items:flex-start;max-width:900px;margin:12px auto 0;padding:0 16px;width:100%}
+.shopgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:8px 16px 8px;max-width:900px;margin:0 auto;width:100%}
+.item{background:#fffaf0;border:3px solid #e3cfa6;border-radius:20px;padding:10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 4px 0 #e3cfa6}
+.item.eq{border-color:var(--teal);box-shadow:0 4px 0 var(--teal2);background:#effbf6}
+.item .pv{height:74px;display:grid;place-items:center;font-size:44px}
+.item .nm{font-weight:800;font-size:16px}
+.item .ds{font-size:13px;color:var(--ink2);min-height:16px}
+.item .btn{width:100%;padding:9px 6px;font-size:15px;margin-top:4px}
+.item.mg{grid-column:span 2}
+@media (max-width:420px){.item.mg{grid-column:span 2}}
+/* ---------- minigames ---------- */
+.mgtop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.tbar{flex:1;height:16px;background:#eadbb9;border-radius:9px;overflow:hidden}
+.tbar b{display:block;height:100%;background:linear-gradient(90deg,var(--orange),var(--gold));border-radius:9px}
+.tbar.low b{background:var(--red)}
+.score{font-weight:900;font-size:20px;background:#fff4d6;border:2px solid var(--gold);border-radius:14px;padding:4px 12px;white-space:nowrap}
+.mgprompt{font-size:22px;text-align:center;line-height:1.35;background:#fff;border:2px solid #e3cfa6;border-radius:18px;padding:14px 10px}
+.mgprompt b{color:var(--orange2)}
+.mgfb{text-align:center;font-weight:800;min-height:26px;margin-top:8px;font-size:16px}
+.mgfb.ok{color:var(--teal2)} .mgfb.bad{color:var(--red)}
+.tf{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.tf .btn{font-size:20px;padding:16px}
+.tf .no{background:var(--red);box-shadow:0 4px 0 #a83232}
+.minus{position:fixed;z-index:30;font-weight:900;color:var(--red);font-size:24px;pointer-events:none;animation:coin 1s ease-out forwards}
+.jokerbtn{margin-top:10px;width:100%;background:#7b5cd6;box-shadow:0 4px 0 #5a3fb0;font-size:16px;padding:10px}
+.opt.gone{opacity:.18;pointer-events:none}
+/* ---------- parents ---------- */
+.pwrap{max-width:900px;margin:0 auto;padding:10px 16px 40px;width:100%}
+.pcard{background:#fff;border:2px solid #e3cfa6;border-radius:18px;padding:14px 16px;margin-top:14px}
+.pcard h3{margin:0 0 8px;font-size:19px;color:var(--orange2)}
+.pcard p{margin:6px 0;line-height:1.45;font-size:16px}
+.gauge{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;flex:none}
+.gauge div{width:96px;height:96px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;font-size:26px;text-align:center;line-height:1}
+.gauge small{display:block;font-size:11px;font-weight:700;color:var(--ink2);margin-top:3px}
+.ready{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-block;background:#effbf6;border:1.5px solid #9fdcc8;border-radius:12px;padding:3px 9px;margin:3px 3px 0 0;font-size:14px}
+.chip.w{background:#fff1f1;border-color:#f3b0b0}
+.chip.g{background:#f4f1ea;border-color:#ddd3bd;color:var(--ink2)}
+.wl{width:100%;border-collapse:collapse;font-size:15px}
+.wl td{padding:6px 4px;border-bottom:1px solid #f1e6cf;vertical-align:top}
+.wl .c{color:var(--ink2);font-size:13px}
+.days{display:flex;gap:6px;align-items:flex-end;height:80px;margin-top:8px}
+.days div{flex:1;text-align:center;font-size:11px;color:var(--ink2)}
+.days i{display:block;background:var(--teal);border-radius:5px 5px 2px 2px;margin:0 auto 3px;width:70%;min-height:3px}
+.countdown{max-width:1100px;margin:4px auto 0;padding:0 16px;width:100%}
+.countdown div{background:#fff0d0;border:2px solid var(--gold);border-radius:14px;padding:8px 12px;font-weight:800;text-align:center}
+.gateIn{font:inherit;font-size:26px;width:140px;text-align:center;padding:8px;border-radius:12px;border:3px solid #e3cfa6}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+/* minigame map modes */
+.mode-mgflug .state,.mode-mgblitz .state{fill:var(--c)}
+.mode-mgfluss .state{fill:var(--cn)}
+.mode-mgflug .lyr-caps,.mode-mgfluss .lyr-rivers{display:inline}
+.mode-mgfluss .river{stroke:#2a7fc0;stroke-dasharray:none}
+.mode-mgfluss .riverflow{opacity:.95;animation:flow 1.4s linear infinite}
+.mode-mgflug .cap .flag{opacity:0}
+.mode-mgflug .cap .dot{fill:#fff;stroke-width:2}
+.mode-mgflug .cap .dot{r:5}
+
 /* ---------- certificate ---------- */
 .cert{background:#fffdf6;border:10px double #c9a24a;border-radius:10px;padding:26px 22px;text-align:center;max-width:620px;width:100%;position:relative}
 .cert h1{font-size:34px;margin:4px 0;color:#9a6b00;letter-spacing:3px}
@@ -248,15 +308,18 @@ th{background:#f3e5c5}
 <!-- ============ HUB ============ -->
 <section id="hub" class="screen paperbg scroll">
   <div class="top">
-    <div style="font-size:40px">🎈</div>
+    <svg id="hubBalloon" viewBox="-20 -54 40 56" width="46" height="64"></svg>
     <div class="who"><h2 id="hubName">Deutschland-Expedition</h2><div class="rank" id="hubRank"></div></div>
     <div class="coins" id="hubCoins">🪙 0</div>
   </div>
+  <div class="countdown" id="hubCountdown"></div>
   <div class="hubsec">Deine Expedition</div>
   <div class="hubgrid" id="hubChapters"></div>
   <div class="hubsec">Extras</div>
   <div class="hubgrid" id="hubExtras"></div>
-  <div class="hubfoot"><button class="linkbtn" id="btnStory">Geschichte nochmal ansehen</button> · <button class="linkbtn" id="btnReset">Fortschritt zurücksetzen</button></div>
+  <div class="hubsec">Minispiele</div>
+  <div class="hubgrid" id="hubGames"></div>
+  <div class="hubfoot"><button class="linkbtn" id="btnStory">Geschichte nochmal ansehen</button> · <button class="linkbtn" id="btnParents">👪 Elternbereich</button></div>
 </section>
 
 <!-- ============ PLAY ============ -->
@@ -295,6 +358,25 @@ th{background:#f3e5c5}
     
   </div>
   <div class="listwrap printme" id="listBody"></div>
+</section>
+
+<!-- ============ BASAR ============ -->
+<section id="shop" class="screen paperbg scroll">
+  <div class="bar-top">
+    <button class="iconbtn" id="shopHome">🏕️</button>
+    <div class="title">🛒 Ballon-Basar</div>
+    <div class="coins" id="shopCoins">🪙 0</div>
+  </div>
+  <div id="shopBody"></div>
+</section>
+
+<!-- ============ ELTERN ============ -->
+<section id="parents" class="screen paperbg scroll">
+  <div class="bar-top">
+    <button class="iconbtn" id="parHome">🏕️</button>
+    <div class="title">👪 Elternbereich</div>
+  </div>
+  <div class="pwrap" id="parBody"></div>
 </section>
 
 <div class="overlay" id="ov"><div class="modal" id="ovBox"></div></div>
@@ -412,8 +494,12 @@ const BCOLORS=['#ef4b4b','#2f86e0','#22a36a','#9b5de5'];
 
 /* ======================= SPEICHER ======================= */
 const KEY='dexp-v1';
-let S={name:'',color:BCOLORS[0],points:0,items:{},stamps:{},boss:false,muted:false,started:false};
+let S={name:'',color:BCOLORS[0],points:0,items:{},stamps:{},boss:false,muted:false,started:false,
+  spent:0,bonus:0,owned:{},equip:{pattern:'plain',buddy:'',flag:'plain'},jokers:0,hs:{},log:[],conf:{},days:{},testDate:''};
 try{const raw=localStorage.getItem(KEY); if(raw) S=Object.assign(S,JSON.parse(raw));}catch(e){}
+function balance(){return S.points+S.bonus-S.spent;}
+function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function logEv(o){o.t=Date.now();S.log.push(o);if(S.log.length>300)S.log=S.log.slice(-300);}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 function rec(ch,id){S.items[ch]=S.items[ch]||{};return S.items[ch][id]=S.items[ch][id]||{r:0,w:0,s:0};}
 function isRev(ch,id){const r=S.items[ch]&&S.items[ch][id];return !!(r&&r.r>0);}
@@ -450,6 +536,9 @@ let VB=Object.assign({},VB0);
 function setVB(){svg.setAttribute('viewBox',`${VB.x} ${VB.y} ${VB.w} ${VB.h}`);}
 setVB(); svg.setAttribute('preserveAspectRatio','xMidYMid meet');
 const MAP={states:{},rivers:{},caps:{},geb:{},berg:{},lbl:{}};
+let BID=0;
+const BUDDIES={hund:'🐶',katze:'🐱',pinguin:'🐧',fuchs:'🦊',drache:'🐲'};
+const STAR='M0 -3 L0.9 -0.9 L3 -0.9 L1.3 0.4 L1.9 2.6 L0 1.3 L-1.9 2.6 L-1.3 0.4 L-3 -0.9 L-0.9 -0.9Z';
 (function build(){
   const defs=el('defs',{},svg);
   defs.innerHTML=`
@@ -522,7 +611,7 @@ const MAP={states:{},rivers:{},caps:{},geb:{},berg:{},lbl:{}};
     el('path',{d:`M${x-2.6} ${y-4.8} L${x} ${y-9} L${x+2.6} ${y-4.8} L${x+1} ${y-5.8} L${x} ${y-4.6} L${x-1} ${y-5.8}Z`,fill:'#fff'},g);
     const f=el('g',{class:'pf'},g);
     el('line',{x1:x,y1:y-9,x2:x,y2:y-22,stroke:'#4d3826','stroke-width':1.3},f);
-    el('path',{d:`M${x} ${y-22} l9 3 l-9 3z`,fill:S.color,class:'myflag'},f);
+    el('g',{class:'flagart','data-x':x,'data-y':y-22},f);
     MAP.berg[m.id]=g;
   });
   // Heimat
@@ -541,7 +630,7 @@ const MAP={states:{},rivers:{},caps:{},geb:{},berg:{},lbl:{}};
   el('g',{id:'fx'},svg);
   el('g',{id:'tags'},svg);
   const bal=el('g',{id:'balloon'},svg);
-  bal.innerHTML=balloonSVG(S.color,1);
+  bal.innerHTML=myBalloon(1);
 })();
 function riverLabels(){ // nach dem Rendern: Mittelpunkt der Flüsse
   const gL=svg.querySelector('.lyr-labels');
@@ -557,19 +646,43 @@ function riverPoint(id){
   return RP_[id]=pt;
 }
 function mix(a,b,t){const h=x=>[1,3,5].map(i=>parseInt(x.substr(i,2),16));const A=h(a),B=h(b);return '#'+A.map((v,i)=>Math.round(v*(1-t)+B[i]*t).toString(16).padStart(2,'0')).join('');}
-function balloonSVG(col,sc){
+function balloonSVG(col,sc,pat,buddy){
+  pat=pat||'plain';const id='bc'+(BID++);
+  const sh='M0 -20 C 14 -20 17 -6 11 4 C 7 10 3 13 2 16 L -2 16 C -3 13 -7 10 -11 4 C -17 -6 -14 -20 0 -20Z';
+  let base=col,deco='';
+  if(pat==='streifen')deco=[-14,-6,2,10].map(x=>`<rect x="${x}" y="-22" width="4" height="40" fill="#fff" opacity=".85"/>`).join('');
+  if(pat==='punkte')deco=[[-7,-12],[5,-14],[-1,-4],[8,-3],[-8,2],[2,7],[-3,-16]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.3" fill="#fff" opacity=".9"/>`).join('');
+  if(pat==='sterne')deco=[[-6,-11,1.1],[6,-9,.9],[0,1,1],[-8,0,.7],[8,4,.7],[1,-16,.7]].map(([x,y,k])=>`<path transform="translate(${x} ${y}) scale(${k})" d="${STAR}" fill="#ffd84d" stroke="#b78900" stroke-width=".4"/>`).join('');
+  if(pat==='regenbogen'){deco=['#e63946','#f4a261','#f6d743','#5cb85c','#3a86ff','#8e44ad'].map((c,i)=>`<rect x="-20" y="${-21+i*6.3}" width="40" height="6.5" fill="${c}"/>`).join('');}
+  if(pat==='fussball'){base='#fff';deco=[[0,-13],[-9,-3],[9,-3],[0,7],[-6,10],[6,10]].map(([x,y])=>`<path transform="translate(${x} ${y})" d="M0 -3.4 L3.2 -1 L2 2.7 L-2 2.7 L-3.2 -1Z" fill="#222"/>`).join('');}
   return `<g class="bob"><g transform="scale(${sc}) translate(0,-30)">
-   <path d="M0 -20 C 14 -20 17 -6 11 4 C 7 10 3 13 2 16 L -2 16 C -3 13 -7 10 -11 4 C -17 -6 -14 -20 0 -20Z" fill="${col}" stroke="#3a2c22" stroke-width="1.2"/>
-   <path d="M0 -20 C 6 -18 7 -4 2 16 M0 -20 C -6 -18 -7 -4 -2 16" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.6"/>
-   <ellipse cx="-6" cy="-10" rx="2.5" ry="5" fill="#fff" opacity=".45"/>
+   <defs><clipPath id="${id}"><path d="${sh}"/></clipPath></defs>
+   <path d="${sh}" fill="${base}"/><g clip-path="url(#${id})">${deco}</g>
+   <path d="${sh}" fill="none" stroke="#3a2c22" stroke-width="1.2"/>
+   <path d="M0 -20 C 6 -18 7 -4 2 16 M0 -20 C -6 -18 -7 -4 -2 16" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.4"/>
+   <ellipse cx="-6" cy="-10" rx="2.5" ry="5" fill="#fff" opacity=".4"/>
    <line x1="-2" y1="16" x2="-3" y2="22" stroke="#3a2c22" stroke-width=".9"/><line x1="2" y1="16" x2="3" y2="22" stroke="#3a2c22" stroke-width=".9"/>
+   ${buddy&&BUDDIES[buddy]?`<text x="0" y="24" font-size="10.5" text-anchor="middle">${BUDDIES[buddy]}</text>`:''}
    <rect x="-4" y="22" width="8" height="6" rx="1.5" fill="#a0672f" stroke="#3a2c22" stroke-width="1"/>
   </g></g>`;
 }
-function setBalloonColor(){$('balloon').innerHTML=balloonSVG(S.color,1);svg.querySelectorAll('.myflag').forEach(f=>f.setAttribute('fill',S.color));}
+function myBalloon(sc){return balloonSVG(S.color,sc||1,S.equip.pattern,S.equip.buddy);}
+function flagArt(x,y,type,col){
+  col=col||S.color;const w=10,h=7;let g='';
+  if(type==='deutschland')g=`<rect x="${x}" y="${y}" width="${w}" height="${h/3}" fill="#111"/><rect x="${x}" y="${y+h/3}" width="${w}" height="${h/3}" fill="#dd0000"/><rect x="${x}" y="${y+2*h/3}" width="${w}" height="${h/3}" fill="#ffce00"/>`;
+  else if(type==='pirat')g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#222"/><circle cx="${x+5}" cy="${y+3}" r="1.7" fill="#fff"/><rect x="${x+4}" y="${y+4.2}" width="2" height="1.2" fill="#fff"/><path d="M${x+2} ${y+5.8} L${x+8} ${y+1.2} M${x+2} ${y+1.2} L${x+8} ${y+5.8}" stroke="#fff" stroke-width=".7"/>`;
+  else if(type==='stern')g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#2f6fd6"/><path transform="translate(${x+5} ${y+3.6}) scale(.9)" d="${STAR}" fill="#ffd84d"/>`;
+  else if(type==='regenbogen')g=['#e63946','#f4a261','#f6d743','#5cb85c','#3a86ff','#8e44ad'].map((c,i)=>`<rect x="${x}" y="${y+i*h/6}" width="${w}" height="${h/6+.05}" fill="${c}"/>`).join('');
+  else if(type==='schach'){for(let r=0;r<2;r++)for(let c=0;c<4;c++)g+=`<rect x="${x+c*2.5}" y="${y+r*3.5}" width="2.5" height="3.5" fill="${(r+c)%2?'#fff':'#111'}"/>`;}
+  else g=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col}"/>`;
+  return g+`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" stroke="#4d3826" stroke-width=".6"/>`;
+}
+function refreshFlags(){svg.querySelectorAll('.flagart').forEach(g=>g.innerHTML=flagArt(+g.dataset.x,+g.dataset.y,S.equip.flag));}
+function setBalloonColor(){$('balloon').innerHTML=myBalloon(1);refreshFlags();}
 let balPos=P(...HOME.p);
 function moveBalloon(x,y,instant){const b=$('balloon');if(instant){b.style.transition='none';}b.style.transform=`translate(${x}px,${y}px)`;if(instant){b.getBoundingClientRect();b.style.transition='';}balPos=[x,y];}
 moveBalloon(...balPos,true);
+refreshFlags();
 
 /* ---- Pan & Zoom ---- */
 const ptrs=new Map();let drag=null,moved=false,pinch=null;
@@ -596,7 +709,7 @@ function clearTags(){$('tags').innerHTML='';}
 function confetti(n=26){const cols=['#ef7b2d','#1f9e89','#f2b632','#e04848','#7cc3e8','#9b5de5'];for(let i=0;i<n;i++){const d=document.createElement('div');d.className='confetti';d.style.left=(20+Math.random()*60)+'vw';d.style.top=(-5-Math.random()*10)+'vh';d.style.background=rnd(cols);d.style.setProperty('--dx',(Math.random()*40-20)+'vw');d.style.setProperty('--r',(Math.random()*720)+'deg');d.style.animationDelay=Math.random()*.25+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),1800);}}
 function coinFly(n,anchor){const d=document.createElement('div');d.className='coinfly';d.textContent='+'+n+' 🪙';const r=(anchor||$('playCoins')).getBoundingClientRect();d.style.left=(r.left)+'px';d.style.top=(r.bottom+4)+'px';document.body.appendChild(d);setTimeout(()=>d.remove(),1000);}
 function addPoints(n){S.points+=n;save();updCoins();}
-function updCoins(){['playCoins','hubCoins'].forEach(i=>$(i).textContent='🪙 '+S.points);}
+function updCoins(){['playCoins','hubCoins','shopCoins'].forEach(i=>{const e=$(i);if(e)e.textContent='🪙 '+balance();});}
 
 /* ======================= KARTEN-ZUSTAND ======================= */
 function locOf(type,id){
@@ -699,7 +812,9 @@ function nextQ(){
     R.q=makeQ(ch,id);setMode('finale','q-'+ch);
   } else {
     if(R.i>=R.queue.length)return endRound();
-    const id=R.queue[R.i];R.q=makeQ(R.ch,id,R.lastKindFor&&R.lastKindFor[id]);
+    const it=R.queue[R.i];const ch=R.mixed?it.ch:R.ch,id=R.mixed?it.id:it;
+    R.q=makeQ(ch,id,R.lastKindFor&&R.lastKindFor[ch+'|'+id]);
+    if(R.mixed){setMode(ch);applyRevealed();}
   }
   R.answered=false;
   if(R.q.hl)highlight(...R.q.hl);
@@ -714,7 +829,8 @@ function renderPanel(fb){
   const q=R.q;let h=progressHTML();
   if(!fb){
     h+=guideHTML(q.text+(R.streak>=3?`<span class="streak">🔥 ${R.streak}er-Serie</span>`:''));
-    if(q.kind==='choice'){h+='<div class="opts">'+q.options.map((o,k)=>`<button class="opt" data-k="${k}">${esc(o)}</button>`).join('')+'</div>';}
+    if(q.kind==='choice'){h+='<div class="opts">'+q.options.map((o,k)=>`<button class="opt" data-k="${k}">${esc(o)}</button>`).join('')+'</div>';
+      if(!R.boss&&S.jokers>0)h+=`<button class="btn jokerbtn" id="btnJoker">🃏 Joker einsetzen (noch ${S.jokers})</button>`;}
     else h+=`<div class="taphint">👆 Tippe direkt auf die Karte${VB.w<VB0.w?'':' – mit + kannst du näher heranzoomen'}</div>`;
   } else {
     h+=guideHTML(fb.html);
@@ -723,9 +839,12 @@ function renderPanel(fb){
   }
   $('panel').innerHTML=h;$('panel').scrollTop=0;
   if(!fb&&q.kind==='choice')$('panel').querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(+b.dataset.k));
+  if(!fb&&$('btnJoker'))$('btnJoker').onclick=()=>{if(S.jokers<1)return;S.jokers--;save();sfx.whoosh();
+    const wrong=shuffle([...$('panel').querySelectorAll('.opt')].filter(b=>q.options[+b.dataset.k]!==q.answer)).slice(0,2);wrong.forEach(b=>b.classList.add('gone'));$('btnJoker').remove();};
   if(fb)$('btnNext').onclick=()=>{R.i++;nextQ();};
 }
-function onMapTap(t){
+function onMapTap(t,e){
+  if(MG&&MG.active){mgTap(t,e);return;}
   if(!t)return;
   const type=t.dataset.t,id=t.dataset.id;
   if($('play').classList.contains('on')&&R&&!R.answered&&R.q.kind==='tap'){
@@ -742,6 +861,9 @@ function answer(k,tapId){
   const r=rec(q.ch,q.id);
   const wasRev=r.r>0;
   if(ok){r.r++;r.s++;R.streak++;R.firstTry++;}else{r.w++;r.s=0;R.streak=0;}
+  const dk=today();S.days[dk]=(S.days[dk]||0)+1;
+  if(!ok){let picked=null;if(q.kind==='choice')picked=q.options[k];else if(tapId){picked=q.tapType==='state'?SB[tapId].name:q.tapType==='river'?tapId:q.tapType==='geb'?GB[tapId].name:BB_[tapId].name;}
+    if(picked){const ck=q.ch+'|'+q.id;S.conf[ck]=S.conf[ck]||{};S.conf[ck][picked]=(S.conf[ck][picked]||0)+1;}}
   save();
   // Karte
   clearHL();
@@ -762,7 +884,7 @@ function answer(k,tapId){
   } else {
     sfx.bad();
     if(!R.boss){ // später nochmal fragen
-      if(R.queue.length<R.maxLen){const pos=Math.min(R.queue.length,R.i+3);R.queue.splice(pos,0,q.id);R.lastKindFor=R.lastKindFor||{};R.lastKindFor[q.id]=q.kind;}
+      if(R.queue.length<R.maxLen){const pos=Math.min(R.queue.length,R.i+3);R.queue.splice(pos,0,R.mixed?{ch:q.ch,id:q.id}:q.id);R.lastKindFor=R.lastKindFor||{};R.lastKindFor[q.ch+'|'+q.id]=q.kind;}
     } else {R.hp=Math.min(R.maxhp,R.hp+1);}
     html=`Nicht ganz! Richtig ist: <b>${esc(q.solName)}</b><span class="fact">💡 ${q.fact}</span>`+(R.boss?'<span class="fact">🌫️ Hihihi! Der Nebelgeist wird wieder etwas größer …</span>':'<span class="fact">🔁 Keine Sorge, die Frage kommt gleich nochmal.</span>');
   }
@@ -773,6 +895,7 @@ function shortName(q){const [t,id]=q.sol;if(t==='state')return SB[id].name;if(t=
 function endRound(){
   clearHL();clearTags();
   if(R.boss){
+    logEv({k:'boss',n:R.res.length,ok:R.res.filter(Boolean).length,win:R.hp<=0});save();
     if(R.hp<=0){S.boss=true;save();sfx.stamp();confetti(80);bossWin();}
     else {modal(`<div style="font-size:60px">🌫️</div><h2>Fast geschafft!</h2><p>Graf Grauschleier konnte sich gerade noch verstecken. Übe noch ein bisschen in den Kapiteln – dann schaffst du ihn!</p><div class="row"><button class="btn" onclick="startBoss(true);closeModal()">Nochmal kämpfen</button><button class="btn ghost" onclick="closeModal();goHub()">Zur Expedition</button></div>`);}
     return;
@@ -780,6 +903,11 @@ function endRound(){
   const n=R.res.length,ok=R.res.filter(Boolean).length;
   const firstPct=R.queue.length?ok/n:0;
   const stars=firstPct>=.9?3:firstPct>=.7?2:firstPct>=.4?1:0;
+  logEv({k:R.mixed?'train':'kap',ch:R.ch,n,ok});save();
+  if(R.mixed){if(stars>=2){sfx.stamp();confetti(50);}
+    const starH=[0,1,2].map(i=>`<span class="${i<stars?'':'off'}" style="animation-delay:${i*.2}s">⭐</span>`).join('');
+    modal(`<div class="stars">${starH}</div><h2>${['Weiter üben!','Gut gemacht!','Super gemacht!','Fantastisch!'][stars]}</h2><p>${ok} von ${n} kniffligen Fragen richtig! 🎯</p>
+    <div class="row"><button class="btn" onclick="closeModal();startTraining()">Nochmal trainieren</button><button class="btn ghost" onclick="closeModal();goHub()">Zur Expedition</button></div>`);return;}
   const st=chStats(R.ch);const c=CHB[R.ch];
   let stampNew='';
   if(st.rv===st.n&&!S.stamps[R.ch]){S.stamps[R.ch]=1;stampNew=`<p>🏅 <b>Kapitel geschafft!</b> ${c.done} Du bekommst einen Stempel in deinen Expeditions-Pass!</p>`;addPoints(50);}
@@ -910,7 +1038,9 @@ $('introBack').onclick=()=>{if(introStep>0){introStep--;renderIntro();}};
 
 /* ======================= HUB ======================= */
 function goHub(){
-  ATLAS=false;R=null;show('hub');updCoins();
+  ATLAS=false;R=null;if(MG){clearInterval(MG.timer);MG=null;}show('hub');updCoins();
+  $('hubBalloon').innerHTML=myBalloon(1);
+  const cd=daysToTest();$('hubCountdown').innerHTML=cd===null?'':`<div>${cd>1?`⏰ Noch <b>${cd} Tage</b> bis zum Erdkunde-Test!`:cd===1?'⏰ <b>Morgen</b> ist der Erdkunde-Test – du schaffst das! 💪':cd===0?'🍀 <b>Heute</b> ist der Test – viel Glück!':'🎉 Der Test ist vorbei – du kannst trotzdem weiter entdecken!'}</div>`;
   $('hubName').textContent=S.name?`${S.name}s Expedition`:'Deutschland-Expedition';
   $('hubRank').textContent='Rang: '+rank();
   $('hubChapters').innerHTML=CHAPTERS.map((c,i)=>{const st=chStats(c.id);const sp=S.stamps[c.id];
@@ -920,21 +1050,238 @@ function goHub(){
   $('hubChapters').querySelectorAll('[data-ch]').forEach(b=>b.onclick=()=>startChapter(b.dataset.ch));
   $('cBoss').onclick=()=>startBoss();
   $('hubExtras').innerHTML=[
+    ['shop','🛒','Ballon-Basar',`Tausche deine Münzen! Du hast 🪙 ${balance()}`,'#fff0b8'],
+    ['train','🎯','Training','Deine kniffligsten Fragen gezielt üben','#ffd6d6'],
     ['atlas','🔭','Atlas','Die ganze Karte frei erkunden','#d3ecfb'],
-    ['mem','🃏','Hauptstadt-Memory','Finde Land und Hauptstadt','#ffe3c2'],
+    ['mem','🧠','Hauptstadt-Memory','Finde Land und Hauptstadt','#ffe3c2'],
     ['list','📜','Spickzettel','Alles auf einen Blick zum Nachlesen','#efe2c4'],
     ['cert','🏆','Urkunde',S.boss?'Deine Urkunde ansehen':'Gibt es nach dem Finale','#fff0b8']
   ].map(([k,ic,t,s,bg])=>`<button class="ccard" data-x="${k}"><div class="ic" style="background:${bg}">${ic}</div><div><div class="t">${t}</div><div class="s">${s}</div></div></button>`).join('');
-  $('hubExtras').querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{const k=b.dataset.x;if(k==='atlas')startAtlas();if(k==='mem')startMemory();if(k==='list')showList();if(k==='cert'){if(S.boss)bossWin();else modal(`<div style="font-size:56px">🔒</div><h2>Noch verschlossen</h2><p>Die Urkunde bekommst du, wenn du im Finale Graf Grauschleier besiegt hast!</p><div class="row"><button class="btn" onclick="closeModal()">OK</button></div>`);}});
+  $('hubGames').innerHTML=Object.entries(MGDEF).map(([id,d])=>{const own=owns('mg',id);const it=SHOP.mg.find(x=>x.id===id);
+    return `<button class="ccard" data-g="${id}"><div class="ic" style="background:${d.bg}">${own?d.icon:'🔒'}</div><div><div class="t">${d.name}</div><div class="s">${own?(S.hs[id]?`Rekord: ${S.hs[id]} Punkte`:'Freigeschaltet – los geht\'s!'):`Im Basar für 🪙 ${it.price}`}</div></div></button>`;}).join('');
+  $('hubGames').querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{const id=b.dataset.g;if(owns('mg',id))mgIntro(id);else goShop();});
+  $('hubExtras').querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{const k=b.dataset.x;if(k==='shop')goShop();if(k==='train')startTraining();if(k==='atlas')startAtlas();if(k==='mem')startMemory();if(k==='list')showList();if(k==='cert'){if(S.boss)bossWin();else modal(`<div style="font-size:56px">🔒</div><h2>Noch verschlossen</h2><p>Die Urkunde bekommst du, wenn du im Finale Graf Grauschleier besiegt hast!</p><div class="row"><button class="btn" onclick="closeModal()">OK</button></div>`);}});
 }
 $('btnHome').onclick=goHub;$('memHome').onclick=goHub;$('listHome').onclick=goHub;
 $('btnStory').onclick=()=>{introStep=0;show('intro');renderIntro();};
-let resetArm=false;
-$('btnReset').onclick=()=>{if(!resetArm){resetArm=true;$('btnReset').textContent='Wirklich alles löschen? Nochmal tippen!';setTimeout(()=>{resetArm=false;$('btnReset').textContent='Fortschritt zurücksetzen';},4000);return;}
-  S.points=0;S.items={};S.stamps={};S.boss=false;save();resetArm=false;$('btnReset').textContent='Fortschritt zurücksetzen';applyRevealed();goHub();};
+$('btnParents').onclick=parentGate;$('shopHome').onclick=goHub;$('parHome').onclick=goHub;
 function updSound(){$('btnSound').textContent=S.muted?'🔇':'🔊';}
 $('btnSound').onclick=()=>{S.muted=!S.muted;save();updSound();};
 $('ov').addEventListener('click',e=>{if(e.target===$('ov'))closeModal();});
+
+/* ======================= BALLON-BASAR ======================= */
+const SHOP={
+ mg:[{id:'flug',price:150},{id:'blitz',price:200},{id:'fluss',price:250}],
+ pattern:[{id:'plain',name:'Einfarbig',price:0},{id:'streifen',name:'Streifen',price:50},{id:'punkte',name:'Punkte',price:50},{id:'sterne',name:'Sterne',price:80},{id:'regenbogen',name:'Regenbogen',price:100},{id:'fussball',name:'Fußball',price:100}],
+ buddy:[{id:'',name:'Allein',price:0},{id:'hund',name:'Hund',price:80},{id:'katze',name:'Katze',price:80},{id:'pinguin',name:'Pinguin',price:100},{id:'fuchs',name:'Fuchs',price:100},{id:'drache',name:'Drache',price:150}],
+ flag:[{id:'plain',name:'Ballonfarbe',price:0},{id:'deutschland',name:'Deutschland',price:60},{id:'stern',name:'Sternenfahne',price:60},{id:'regenbogen',name:'Regenbogen',price:60},{id:'schach',name:'Zielflagge',price:80},{id:'pirat',name:'Piraten',price:80}]
+};
+const JOKER_PRICE=30,JOKER_MAX=5;
+function owns(cat,id){const it=(SHOP[cat]||[]).find(x=>x.id===id);return !!(it&&it.price===0)||!!S.owned[cat+':'+id];}
+function goShop(){if(MG){clearInterval(MG.timer);MG=null;}ATLAS=false;R=null;show('shop');updCoins();renderShop();}
+function priceBtn(cat,it){
+  const own=owns(cat,it.id);
+  if(cat==='mg')return own?`<button class="btn teal" data-play="${it.id}">▶ Spielen</button>`:`<button class="btn" data-buy="${cat}|${it.id}" ${balance()<it.price?'disabled':''}>🪙 ${it.price} ${balance()<it.price?'':'kaufen'}</button>`;
+  if(own)return S.equip[cat]===it.id?`<button class="btn teal" disabled>✓ Angelegt</button>`:`<button class="btn ghost" data-eq="${cat}|${it.id}">Anlegen</button>`;
+  return `<button class="btn" data-buy="${cat}|${it.id}" ${balance()<it.price?'disabled':''}>🪙 ${it.price} ${balance()<it.price?'':'kaufen'}</button>`;
+}
+function renderShop(){
+  const sec=t=>`<div class="hubsec" style="margin-top:14px">${t}</div>`;
+  let h=`<div class="shophead"><div class="avatar">🦫</div><div class="bubble">Hallo${S.name?' '+esc(S.name):''}! Ich bin <b>Biber Bruno</b>. In meinem Basar tauschst du deine Münzen gegen tolle Sachen. Du hast <b>🪙 ${balance()}</b>.${balance()<50?'<span class="fact">Spiel ein paar Runden in den Kapiteln, dann füllt sich dein Beutel!</span>':''}</div></div>`;
+  h+=sec('🎮 Minispiele freischalten')+'<div class="shopgrid">'+SHOP.mg.map(it=>{const d=MGDEF[it.id];return `<div class="item mg ${owns('mg',it.id)?'eq':''}"><div class="pv">${d.icon}</div><div class="nm">${d.name}</div><div class="ds">${d.short}</div>${priceBtn('mg',it)}</div>`;}).join('')+'</div>';
+  h+=sec('🎈 Ballon-Muster')+'<div class="shopgrid">'+SHOP.pattern.map(it=>`<div class="item ${S.equip.pattern===it.id?'eq':''}"><div class="pv"><svg viewBox="-20 -54 40 56" width="52" height="72">${balloonSVG(S.color,1,it.id,S.equip.buddy)}</svg></div><div class="nm">${it.name}</div>${priceBtn('pattern',it)}</div>`).join('')+'</div>';
+  h+=sec('🐾 Begleiter im Korb')+'<div class="shopgrid">'+SHOP.buddy.map(it=>`<div class="item ${S.equip.buddy===it.id?'eq':''}"><div class="pv"><svg viewBox="-20 -54 40 56" width="52" height="72">${balloonSVG(S.color,1,S.equip.pattern,it.id)}</svg></div><div class="nm">${it.id?BUDDIES[it.id]+' ':''}${it.name}</div>${priceBtn('buddy',it)}</div>`).join('')+'</div>';
+  h+=sec('🚩 Gipfelfahnen')+'<div class="shopgrid">'+SHOP.flag.map(it=>`<div class="item ${S.equip.flag===it.id?'eq':''}"><div class="pv"><svg viewBox="-4 -2 22 26" width="62" height="72"><line x1="1" y1="1" x2="1" y2="24" stroke="#4d3826" stroke-width="1.2"/>${flagArt(1,1,it.id)}</svg></div><div class="nm">${it.name}</div>${priceBtn('flag',it)}</div>`).join('')+'</div>';
+  h+=sec('🃏 Hilfen')+`<div class="shopgrid"><div class="item mg"><div class="pv">🃏</div><div class="nm">Joker</div><div class="ds">Lässt bei einer Frage zwei falsche Antworten verschwinden. Gilt nicht im Finale. Du hast: <b>${S.jokers}</b> (höchstens ${JOKER_MAX})</div><button class="btn" id="buyJoker" ${balance()<JOKER_PRICE||S.jokers>=JOKER_MAX?'disabled':''}>🪙 ${JOKER_PRICE} kaufen</button></div></div><div style="height:30px"></div>`;
+  $('shopBody').innerHTML=h;
+  $('shopBody').querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>buy(...b.dataset.buy.split('|')));
+  $('shopBody').querySelectorAll('[data-eq]').forEach(b=>b.onclick=()=>{const [c,id]=b.dataset.eq.split('|');S.equip[c]=id;save();sfx.flip();setBalloonColor();renderShop();});
+  $('shopBody').querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>mgIntro(b.dataset.play));
+  const bj=$('buyJoker');if(bj)bj.onclick=()=>{if(balance()<JOKER_PRICE||S.jokers>=JOKER_MAX)return;S.spent+=JOKER_PRICE;S.jokers++;save();sfx.ok();updCoins();renderShop();};
+}
+function buy(cat,id){
+  const it=SHOP[cat].find(x=>x.id===id);if(!it||owns(cat,id)||balance()<it.price)return;
+  S.spent+=it.price;S.owned[cat+':'+id]=true;if(cat!=='mg')S.equip[cat]=id;save();
+  sfx.stamp();confetti(36);updCoins();setBalloonColor();renderShop();
+  if(cat==='mg')modal(`<div style="font-size:60px">${MGDEF[id].icon}</div><h2>Freigeschaltet!</h2><p><b>${MGDEF[id].name}</b> gehört jetzt dir. Du findest es auch auf der Expeditionskarte unter „Minispiele“.</p><div class="row"><button class="btn" onclick="closeModal();mgIntro('${id}')">Gleich spielen ▶</button><button class="btn ghost" onclick="closeModal()">Später</button></div>`);
+}
+
+/* ======================= MINISPIELE ======================= */
+let MG=null;
+const MGDEF={
+ flug:{name:'Ballon-Flug',icon:'🎈',bg:'#ffe3c2',time:60,short:'Flieg auf Zeit zu den Hauptstädten!',how:'Emma ruft dir eine <b>Hauptstadt</b> zu. Tippe so schnell wie möglich auf den richtigen Punkt – dein Ballon fliegt hin! Jeder Fehler kostet 3 Sekunden.'},
+ blitz:{name:'Blitz-Quiz',icon:'⚡',bg:'#fff0b8',time:45,short:'Stimmt das? Hauptstädte im Eiltempo.',how:'Stimmt der Satz oder nicht? Tippe auf <b>Stimmt</b> oder <b>Falsch</b> – so schnell du kannst! Jeder Fehler kostet 3 Sekunden.'},
+ fluss:{name:'Fluss-Rennen',icon:'🌊',bg:'#d3ecfb',time:60,short:'So viele Flüsse wie möglich in 60 Sekunden.',how:'Tippe so schnell du kannst auf den gesuchten <b>Fluss</b>. Zoomen ist erlaubt! Jeder Fehler kostet 3 Sekunden.'}
+};
+function mgIntro(id){
+  if(!owns('mg',id)){goShop();return;}
+  const d=MGDEF[id];
+  modal(`<div style="font-size:64px">${d.icon}</div><h2>${d.name}</h2><p>${d.how}</p><p>⏱️ ${d.time} Sekunden · Jeder Treffer = 1 Punkt = 1 🪙${S.hs[id]?`<br>🏆 Dein Rekord: <b>${S.hs[id]}</b>`:''}</p>
+  <div class="row"><button class="btn" id="mgGo">Start! 🏁</button><button class="btn ghost" onclick="closeModal()">Zurück</button></div>`);
+  $('mgGo').onclick=()=>{closeModal();sfx.whoosh();mgStart(id);};
+}
+function mgStart(id){
+  ATLAS=false;R=null;if(MG)clearInterval(MG.timer);
+  const d=MGDEF[id];
+  MG={id,score:0,miss:0,last:null,active:true,lock:false,total:d.time*1000};
+  show('play');$('playTitle').textContent=d.icon+' '+d.name;
+  Object.assign(VB,VB0);setVB();clearTags();clearHL();applyRevealed();
+  setMode('mg'+id);moveBalloon(...P(...HOME.p),true);
+  MG.end=performance.now()+MG.total;
+  mgNext();MG.timer=setInterval(mgTick,100);
+}
+function mgTick(){if(!MG)return;const left=Math.max(0,MG.end-performance.now());const b=$('mgBar');if(b){b.firstChild.style.width=(left/MG.total*100)+'%';b.classList.toggle('low',left<10000);}const t=$('mgSec');if(t)t.textContent=Math.ceil(left/1000)+' s';if(left<=0)mgEnd();}
+function mgPanel(fb){
+  const left=Math.max(0,MG.end-performance.now());
+  let h=`<div class="mgtop"><div class="tbar" id="mgBar"><b style="width:${left/MG.total*100}%"></b></div><div class="score" id="mgSec" style="background:#fff">${Math.ceil(left/1000)} s</div><div class="score">⭐ ${MG.score}</div></div>`;
+  h+=`<div class="mgprompt">${MG.prompt}</div>`;
+  if(MG.id==='blitz')h+=`<div class="tf"><button class="btn teal" id="tfYes">✔ Stimmt</button><button class="btn no" id="tfNo">✘ Falsch</button></div>`;
+  else h+=`<div class="taphint">👆 Tippe auf die Karte – mit + kannst du zoomen</div>`;
+  h+=`<div class="mgfb ${fb?fb.cls:''}" id="mgFb">${fb?fb.txt:''}</div>`;
+  $('panel').innerHTML=h;
+  if(MG.id==='blitz'){$('tfYes').onclick=()=>mgBlitz(true);$('tfNo').onclick=()=>mgBlitz(false);}
+}
+function mgNext(fb){
+  clearHL();
+  if(MG.id==='flug'){let s;do{s=rnd(STATES);}while(s.id===MG.last);MG.target=s.id;MG.last=s.id;MG.prompt=`Flieg nach <b>${s.cap}</b>! 🎈`;}
+  if(MG.id==='fluss'){let r;do{r=rnd(RIVERS);}while(r.id===MG.last);MG.target=r.id;MG.last=r.id;MG.prompt=`Tippe auf den Fluss <b>${r.id}</b>!`;}
+  if(MG.id==='blitz'){let s;do{s=rnd(STATES);}while(s.id===MG.last);MG.last=s.id;const truth=Math.random()<.5;
+    const cap=truth?s.cap:rnd(STATES.filter(x=>x.cap!==s.cap)).cap;MG.st={s,cap,truth};highlight('state',s.id);
+    MG.prompt=`Die Hauptstadt von <b>${s.name}</b> ist <b>${cap}</b>.`;}
+  mgPanel(fb);
+}
+function mgPenalty(){MG.end-=3000;MG.miss++;const r=$('mgBar')?$('mgBar').getBoundingClientRect():{left:100,top:100};const d=document.createElement('div');d.className='minus';d.textContent='−3 s';d.style.left=(r.left+20)+'px';d.style.top=(r.top-4)+'px';document.body.appendChild(d);setTimeout(()=>d.remove(),1000);}
+function mgTap(t,e){
+  if(!MG||!MG.active||MG.lock)return;
+  if(MG.id==='flug'&&e){
+    const [sx,sy]=clientToSvg(e.clientX,e.clientY);let best=null,bd=1e9;
+    STATES.forEach(s=>{const [x,y]=P(...s.c);const d=Math.hypot(x-sx,y-sy);if(d<bd){bd=d;best=s;}});
+    if(!best||bd>Math.max(22,VB.w/22))return;
+    const [x,y]=P(...best.c);
+    if(best.id===MG.target){MG.score++;sfx.ok();moveBalloon(x,y);puff(x,y);clearTags();tag(x,y,best.cap,false);mgNext({cls:'ok',txt:'✔ '+best.cap+' – Treffer!'});}
+    else{sfx.bad();mgPenalty();clearTags();tag(x,y,'Das ist: '+best.cap,true);mgPanel({cls:'bad',txt:`✘ Das war ${best.cap} (${best.name})`});}
+  }
+  if(MG.id==='fluss'){
+    if(!t||t.dataset.t!=='river')return;const id=t.dataset.id;const [x,y]=riverPoint(id);
+    if(id===MG.target){MG.score++;sfx.ok();moveBalloon(x,y);clearTags();highlight('river',id);tag(x,y,id,false);setTimeout(()=>{if(MG&&MG.active)clearHL();},500);mgNext({cls:'ok',txt:'✔ '+id+' – Treffer!'});}
+    else{sfx.bad();mgPenalty();clearTags();tag(x,y,'Das ist: '+id,true);mgPanel({cls:'bad',txt:'✘ Das war '+(['Rhein','Main','Inn','Neckar'].includes(id)?'der ':'die ')+id});}
+  }
+}
+function mgBlitz(ans){
+  if(!MG||!MG.active||MG.lock)return;const st=MG.st;const ok=ans===st.truth;
+  if(ok){MG.score++;sfx.ok();}else{sfx.bad();mgPenalty();}
+  const txt=(ok?'✔ ':'✘ ')+`${st.s.name} → ${st.s.cap}`;
+  MG.lock=true;const fb=$('mgFb');if(fb){fb.className='mgfb '+(ok?'ok':'bad');fb.textContent=txt;}
+  document.querySelectorAll('.tf .btn').forEach(b=>b.disabled=true);
+  setTimeout(()=>{if(!MG||!MG.active)return;MG.lock=false;mgNext({cls:ok?'ok':'bad',txt});},ok?450:1100);
+}
+function mgEnd(){
+  if(!MG)return;clearInterval(MG.timer);MG.active=false;clearHL();
+  const id=MG.id,sc=MG.score,best=S.hs[id]||0,rec_=sc>best;if(rec_)S.hs[id]=sc;
+  logEv({k:'mg',mg:id,score:sc,miss:MG.miss});if(sc>0)addPoints(sc);save();
+  if(rec_&&sc>0){sfx.stamp();confetti(70);}else sfx.whoosh();
+  modal(`<div style="font-size:60px">🏁</div><h2>Zeit um!</h2><p>Du hast <b>${sc}</b> Punkte geschafft${MG.miss?` (${MG.miss} Fehler)`:''}.</p>
+  ${rec_&&sc>0?'<p>🏆 <b>Neuer Rekord!</b></p>':`<p>Dein Rekord: ${best}</p>`}${sc>0?`<p>+${sc} 🪙 für deinen Beutel</p>`:''}
+  <div class="row"><button class="btn" onclick="closeModal();mgStart('${id}')">Nochmal ▶</button><button class="btn ghost" onclick="closeModal();goHub()">Zur Expedition</button></div>`);
+}
+
+/* ======================= TRAINING ======================= */
+function weakList(){
+  const out=[];
+  CHAPTERS.forEach(c=>c.items.forEach(id=>{const r=S.items[c.id]&&S.items[c.id][id];if(!r||!r.w)return;if(r.s>=2&&r.r>=r.w*2)return;
+    out.push({ch:c.id,id,r:r.r,w:r.w,s:r.s,score:r.w*2-r.r-r.s*1.5});}));
+  return out.sort((a,b)=>b.score-a.score);
+}
+function startTraining(){
+  let pool=weakList().slice(0,10).map(x=>({ch:x.ch,id:x.id}));
+  if(pool.length<10){
+    const rest=[];CHAPTERS.forEach(c=>c.items.forEach(id=>{if(pool.some(p=>p.ch===c.id&&p.id===id))return;const r=S.items[c.id]&&S.items[c.id][id];const lvl=!r?0:(r.s>=2?3:(r.r?1.5:.5));rest.push({ch:c.id,id,sc:lvl+Math.random()*1.2});}));
+    rest.sort((a,b)=>a.sc-b.sc);pool=pool.concat(rest.slice(0,10-pool.length).map(x=>({ch:x.ch,id:x.id})));
+  }
+  pool=shuffle(pool);
+  R={ch:'training',mixed:true,boss:false,queue:pool,i:0,res:[],streak:0,firstTry:0,newRev:0,maxLen:14};
+  show('play');$('playTitle').textContent='🎯 Training: Knifflige Fragen';
+  Object.assign(VB,VB0);setVB();clearTags();moveBalloon(...P(...HOME.p),true);
+  nextQ();
+}
+
+/* ======================= ELTERNBEREICH ======================= */
+function daysToTest(){if(!S.testDate)return null;const t=new Date(S.testDate+'T00:00:00');const n=new Date(today()+'T00:00:00');return Math.round((t-n)/864e5);}
+function parentGate(){
+  const a=12+Math.floor(Math.random()*8),b=3+Math.floor(Math.random()*6);
+  modal(`<div style="font-size:52px">👪🔒</div><h2>Elternbereich</h2><p>Bitte rechnen Sie zum Öffnen:</p><p style="font-size:26px;font-weight:900">${a} × ${b} = ?</p>
+  <input class="gateIn" id="gateIn" type="number" inputmode="numeric" autocomplete="off"><div class="row"><button class="btn" id="gateOk">Öffnen</button><button class="btn ghost" onclick="closeModal()">Abbrechen</button></div>`);
+  const go=()=>{if(+$('gateIn').value===a*b){closeModal();showParents();}else{const i=$('gateIn');i.classList.remove('shake');void i.offsetWidth;i.classList.add('shake');i.value='';}};
+  $('gateOk').onclick=go;$('gateIn').onkeydown=e=>{if(e.key==='Enter')go();};setTimeout(()=>{try{$('gateIn').focus();}catch(e){}},100);
+}
+function itemName(ch,id){
+  if(ch==='laender')return SB[id].name;if(ch==='staedte')return `${SB[id].cap} (Hauptstadt ${SB[id].name})`;
+  if(ch==='fluesse')return id;if(ch==='gebirge')return GB[id].name;return `${BB_[id].name} (${BB_[id].h} m)`;
+}
+function shortItem(ch,id){return ch==='staedte'?SB[id].cap:ch==='berge'?BB_[id].name:itemName(ch,id);}
+function chAcc(ch){let r=0,w=0;CHB[ch].items.forEach(id=>{const x=S.items[ch]&&S.items[ch][id];if(x){r+=x.r;w+=x.w;}});return{r,w,n:r+w,pct:r+w?Math.round(r/(r+w)*100):null};}
+function topConf(ch,id){const c=S.conf[ch+'|'+id];if(!c)return null;const e=Object.entries(c).sort((a,b)=>b[1]-a[1])[0];return e?{name:e[0],n:e[1]}:null;}
+function fmtDate(t){const d=new Date(t);return d.toLocaleDateString('de-DE',{weekday:'short',day:'numeric',month:'numeric'})+' '+d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});}
+function showParents(){
+  show('parents');
+  const nm=S.name?esc(S.name):'Ihr Kind';
+  let total=0,ms=0,rv=0;CHAPTERS.forEach(c=>{const st=chStats(c.id);total+=st.n;ms+=st.ms;rv+=st.rv;});
+  let R_=0,W_=0;CHAPTERS.forEach(c=>{const a=chAcc(c.id);R_+=a.r;W_+=a.w;});
+  const ans=R_+W_,pct=ans?Math.round(R_/ans*100):0;
+  const ready=Math.round((ms+0.4*(rv-ms))/total*100);
+  const verdict=ready>=85?['Testbereit! 🎉','#1f9e89']:ready>=60?['Fast testbereit','#58b368']:ready>=30?['Auf gutem Weg','#f2b632']:['Am Anfang','#ef7b2d'];
+  const dayKeys=Object.keys(S.days).filter(k=>S.days[k]>0);
+  // Kapitel-Bewertung
+  const chs=CHAPTERS.map(c=>{const st=chStats(c.id),a=chAcc(c.id);return{c,st,a,mr:st.ms/st.n};});
+  const practiced=chs.filter(x=>x.a.n>0);
+  const strong=practiced.slice().sort((a,b)=>b.mr-a.mr||(b.a.pct||0)-(a.a.pct||0))[0];
+  const untouched=chs.filter(x=>x.a.n===0).map(x=>x.c.short);
+  const weak=weakList();
+  const weakChs=practiced.filter(x=>x!==strong).sort((a,b)=>a.mr-b.mr)[0];
+  // Verwechslungen
+  const confs=[];Object.entries(S.conf).forEach(([k,v])=>{const [ch,id]=k.split('|');Object.entries(v).forEach(([nm2,n])=>confs.push({ch,id,with:nm2,n}));});confs.sort((a,b)=>b.n-a.n);
+  // Feedbacktext
+  let fbt='';
+  if(!ans)fbt=`<p>${nm} hat noch keine Fragen beantwortet. Am besten mit <b>Kapitel 1: Die 16 Länder</b> starten – 10 Fragen dauern etwa 5 Minuten.</p>`;
+  else{
+    fbt+=`<p>${nm} hat an <b>${dayKeys.length} ${dayKeys.length===1?'Tag':'Tagen'}</b> geübt und <b>${ans} Fragen</b> beantwortet – davon <b>${pct} %</b> richtig.</p>`;
+    if(strong&&strong.st.ms>0)fbt+=`<p>💪 Am sichersten sitzt: <b>${strong.c.short}</b> (${strong.st.ms} von ${strong.st.n} sicher).</p>`;
+    if(weak.length)fbt+=`<p>🎯 Besonders üben: <b>${weak.slice(0,4).map(w=>shortItem(w.ch,w.id)).join(', ')}</b>.</p>`;
+    if(weakChs&&weakChs.mr<.5)fbt+=`<p>📉 Die meisten Lücken gibt es noch bei: <b>${weakChs.c.short}</b>.</p>`;
+    if(confs.length&&confs[0].n>=2)fbt+=`<p>🔀 Häufigste Verwechslung: <b>${shortItem(confs[0].ch,confs[0].id)}</b> ↔ <b>${esc(confs[0].with)}</b> (${confs[0].n}×).</p>`;
+    if(untouched.length)fbt+=`<p>⏳ Noch gar nicht geübt: <b>${untouched.join(', ')}</b>.</p>`;
+    fbt+=`<p>💡 <i>${ready>=85?'Sehr gut vorbereitet! Das Finale gegen Graf Grauschleier ist eine gute Generalprobe.':ready>=60?'Jetzt lohnt sich das Schwächen-Training und danach das Finale als Generalprobe.':untouched.length?'Tipp: Jeden Tag 10–15 Minuten, zuerst die noch offenen Kapitel einmal durchspielen.':'Tipp: Jeden Tag 1–2 Kapitelrunden. Was zweimal hintereinander richtig war, gilt als „sicher“.'}</i></p>`;
+    const cd=daysToTest();if(cd!==null&&cd>=0){const need=total-ms;fbt+=`<p>📅 Noch <b>${cd} ${cd===1?'Tag':'Tage'}</b> bis zum Test. ${need>0&&cd>0?`Es fehlen noch ${need} sichere Antworten – das sind etwa <b>${Math.ceil(need/cd)} pro Tag</b>.`:''}</p>`;}
+  }
+  // 7 Tage
+  const days=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');days.push({k,lbl:d.toLocaleDateString('de-DE',{weekday:'short'}),n:S.days[k]||0});}
+  const maxD=Math.max(10,...days.map(d=>d.n));
+  let h=`<div class="pcard"><div class="ready"><div class="gauge" style="background:conic-gradient(${verdict[1]} ${ready*3.6}deg,#efe2c4 0)"><div>${ready} %<small>testbereit</small></div></div>
+    <div style="flex:1;min-width:200px"><h3 style="color:${verdict[1]}">${verdict[0]}</h3><p style="font-size:14px;color:#6b5644">${ms} von ${total} Lernzielen <b>sicher</b> (2× hintereinander richtig), ${rv} von ${total} schon mindestens einmal richtig.</p>
+    <p style="font-size:14px;margin-top:8px">📅 Testdatum: <input type="date" id="testDate" value="${S.testDate||''}" style="font:inherit;padding:4px 6px;border-radius:8px;border:2px solid #e3cfa6"></p></div></div></div>`;
+  h+=`<div class="pcard"><h3>📝 Feedback</h3>${fbt}<div class="row" style="justify-content:flex-start"><button class="btn small teal" id="parTrain">🎯 Schwächen-Training starten</button></div></div>`;
+  // Stärken
+  h+=`<div class="pcard"><h3>💪 Stärken – das sitzt sicher</h3>`+(ms?CHAPTERS.map(c=>{const it=c.items.filter(id=>isMast(c.id,id));return it.length?`<p><b>${c.icon} ${c.short}</b> (${it.length}/${c.items.length})<br>${it.map(id=>`<span class="chip">${esc(shortItem(c.id,id))}</span>`).join('')}</p>`:'';}).join(''):'<p>Noch nichts sicher gemeistert – das kommt mit den ersten Runden!</p>')+`</div>`;
+  // Schwächen
+  h+=`<div class="pcard"><h3>🎯 Schwächen – hier lohnt sich Üben</h3>`+(weak.length?`<table class="wl">${weak.slice(0,15).map(w=>{const cf=topConf(w.ch,w.id);return `<tr><td>${CHB[w.ch].icon}</td><td><b>${esc(itemName(w.ch,w.id))}</b>${cf?`<div class="c">verwechselt mit: ${esc(cf.name)}${cf.n>1?` (${cf.n}×)`:''}</div>`:''}</td><td class="c" style="white-space:nowrap">${w.w}× falsch<br>${w.r}× richtig</td></tr>`;}).join('')}</table>`:'<p>Bisher keine auffälligen Fehler. 👍</p>')+`</div>`;
+  // Kapitel
+  h+=`<div class="pcard"><h3>📊 Kapitel im Überblick</h3><table class="wl"><tr><td></td><td><b>Kapitel</b></td><td class="c"><b>sicher</b></td><td class="c"><b>Treffer</b></td></tr>${chs.map(x=>`<tr><td>${x.c.icon}</td><td>${x.c.short}<div class="bar" style="margin-top:4px"><b style="width:${x.mr*100}%"></b></div></td><td class="c">${x.st.ms}/${x.st.n}</td><td class="c">${x.a.pct===null?'–':x.a.pct+' %'}</td></tr>`).join('')}</table>
+    ${untouched.length?`<p class="c" style="font-size:14px;color:#6b5644">Noch nie geübt: ${untouched.join(', ')}</p>`:''}</div>`;
+  // Lernzeit
+  const games=S.log.filter(l=>l.k!=='mg').length;
+  h+=`<div class="pcard"><h3>⏱️ Übungsverlauf (7 Tage)</h3><div class="days">${days.map(d=>`<div><i style="height:${Math.round(d.n/maxD*58)+2}px"></i>${d.lbl}<br><b>${d.n||''}</b></div>`).join('')}</div>
+    <p style="font-size:14px;color:#6b5644">Zahl = beantwortete Fragen pro Tag · ${games} Lernrunden gespielt · Finale: ${S.boss?'besiegt 🏆':'noch nicht besiegt'}</p>
+    ${S.log.length?`<table class="wl" style="margin-top:6px">${S.log.slice(-8).reverse().map(l=>`<tr><td class="c" style="white-space:nowrap">${fmtDate(l.t)}</td><td>${l.k==='kap'?CHB[l.ch].icon+' '+CHB[l.ch].short:l.k==='train'?'🎯 Training':l.k==='boss'?'⚡ Finale'+(l.win?' (gewonnen)':''):MGDEF[l.mg].icon+' '+MGDEF[l.mg].name}</td><td class="c" style="white-space:nowrap">${l.k==='mg'?l.score+' Punkte':l.ok+'/'+l.n+' richtig'}</td></tr>`).join('')}</table>`:''}</div>`;
+  // Belohnen & verwalten
+  h+=`<div class="pcard"><h3>🎁 Belohnen & Verwalten</h3><p>Kontostand: <b>🪙 ${balance()}</b> · Gesamt verdient: ${S.points} · Minispiele: ${SHOP.mg.filter(m=>owns('mg',m.id)).length}/3 freigeschaltet</p>
+    <div class="row" style="justify-content:flex-start"><button class="btn small" id="parGift">🎁 50 Bonus-Münzen schenken</button><button class="btn small ghost" id="parReset">Fortschritt zurücksetzen</button></div></div>`;
+  $('parBody').innerHTML=h;
+  $('testDate').onchange=e=>{S.testDate=e.target.value;save();showParents();};
+  $('parTrain').onclick=startTraining;
+  $('parGift').onclick=()=>{S.bonus+=50;save();sfx.stamp();confetti(30);showParents();};
+  let arm=false;$('parReset').onclick=()=>{if(!arm){arm=true;$('parReset').textContent='Wirklich alles löschen? Nochmal tippen!';setTimeout(()=>{arm=false;const b=$('parReset');if(b)b.textContent='Fortschritt zurücksetzen';},4000);return;}
+    Object.assign(S,{points:0,items:{},stamps:{},boss:false,spent:0,bonus:0,owned:{},equip:{pattern:'plain',buddy:'',flag:'plain'},jokers:0,hs:{},log:[],conf:{},days:{}});save();applyRevealed();setBalloonColor();showParents();};
+}
 
 /* ======================= START ======================= */
 updSound();updCoins();
